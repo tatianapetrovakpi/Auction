@@ -1,43 +1,54 @@
 .header{
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 80px;
-  background-color: #e19d82;
+  background-color: #d56528;
   display: flex;
   align-items: center;
   .logo{
-   flex: 40;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex: 30;
     &__image{
 
     }
-    &__title{
-
-    }
-  }
-  .menu{
-    flex: 40;
-    display: flex;
-    &__item{
-      //display: inline;
-
-      list-style: none;
-      flex: 10;
-    }
     &__link{
+      color: #400d01;
+      font-size: 36px;
       text-decoration: none;
     }
   }
+  .menu{
+    flex: 60;
+    display: flex;
+
+    &__item{
+
+      list-style: none;
+      flex: 15;
+    }
+    &__link{
+      color: #e4e1ee;
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+  }
   .cart{
-    flex: 20;
-    background: url(../app/images/cart.png);
+    display: flex;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    flex: 10;
+    background: url(../app/images/cart.png) no-repeat;
     &__count{
-      background-color: #d56528;
-      padding: 5px 10px;
+      margin: 28px 0 0 15px;
+      background-color: #8c391b;
+      padding: 5px 13px;
       border-radius: 20px;
       color: #fff;
-      position: absolute;
-      top: 40px;
-      //right: 16.5%;
-      left: 81.4%;
     }
   }
 }

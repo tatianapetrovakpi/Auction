@@ -4,10 +4,10 @@
   angular.module('myApp', [
         'ui.router'
       ])
-      .config(function($stateProvider) {
+      .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state("otherwise", {
-                url : '/',
+            .state('main', {
+                url: "/",
                 templateUrl:"components/mainPage/mainPageView.html"
             })
             .state('about', {
@@ -25,6 +25,7 @@
             .state('registration', {
                 url: "/registration",
                 templateUrl:"components/registration/registrationView.html"
-            })
+            });
+          $urlRouterProvider.otherwise('/');
       })
 })();
